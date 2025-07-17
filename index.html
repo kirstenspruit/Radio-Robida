@@ -41,6 +41,22 @@
                     </div>
                 </div>
             </section>
+            <h2>Latest Messages</h2>
+            <ul id="messages"></ul>
+
+            <script>
+            fetch('messages.json')
+            .then(res => res.json())
+            .then(data => {
+                const list = document.getElementById('messages');
+                list.innerHTML = '';
+                data.reverse().forEach(msg => {
+                const li = document.createElement('li');
+                li.textContent = `${msg.user}: ${msg.text}`;
+                list.appendChild(li);
+                });
+            });
+            </script>
         </main>
         <footer class="footer">
             <a href="https://robidacollective.com/" target="_blank">Go to main website</a>
