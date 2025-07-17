@@ -123,6 +123,57 @@ body {
     background-color: var(--color_background_secondary);
 }
 
+.timeline {
+    position: relative;
+    border-bottom: var(--border_normal);
+}
+.timeline__inner {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: var(--spacing_l);
+    z-index: 9999;
+}
+
+.timeline-bar {
+    position: relative;
+    height: 100%;
+    background-color: var(--color_yellow);
+    width: 0%;
+    transition: width 0.5s linear;
+}
+
+.timeline-labels {
+    position: absolute;
+    width: 100%;
+    /* top: 0; */
+    font-size: var(--font-size_s);
+}
+
+.date-label {
+    position: absolute;
+    white-space: nowrap;
+    border-left: var(--border_normal);
+    padding-left: var(--spacing_s);
+    padding-top: var(--spacing_s);
+}
+
+.marker {
+    position: absolute;
+    bottom: 100%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 10px;
+    white-space: nowrap;
+}
+
+.marker-dot {
+    width: 6px;
+    height: 6px;
+    background-color: var(--color_brown);
+    border-radius: 50%;
+    margin: 2px auto;
+}
 
 /* || TXT */
 .site-title {
