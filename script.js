@@ -34,14 +34,18 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-
+// TOGGLE ASIDE
+function toggleAside() {
+  var element = document.getElementById("aside");
+  element.classList.toggle("aside--open");
+}
 
 // TIMELINE
 const events = [];
 
 // === Set your start and end date ===
-const startDate = new Date('2025-07-16T00:00:00');
-const endDate = new Date('2025-07-23T23:59:59')
+const startDate = new Date('2025-07-27T00:00:00');
+const endDate = new Date('2025-08-10T23:59:59')
 
 
 // === Events/Markers ===

@@ -90,6 +90,24 @@ body {
 
 .header {
     margin: var(--spacing_section-margin);
+    display: flex;
+    justify-content: space-between;
+}
+.header__nav {
+    align-items: right;
+}
+.header__nav__link {
+    display: block;
+    text-decoration: none;
+    font-family: inherit;
+    font-size: var(--font-size_s);
+    cursor: pointer;
+    background: none;
+    color: var(--color_text_normal);
+    border: var(--border_normal);
+    border-radius: var(--radius_m);
+    padding: 0 var(--spacing_inner-padding);
+    margin-bottom: var(--spacing_xs);
 }
 
 .main {
@@ -98,18 +116,36 @@ body {
     flex-direction: column;
 }
 
-.footer {
-   margin: var(--spacing_section-margin); 
-   position: fixed;
-   bottom: 0;
+.aside {
+    position: fixed;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background-color: white;
+    transition: all 0.5s ease-in-out;
 }
+.aside--open {
+    width: 25vw;
+}
+
+.footer {
+   /* margin: var(--spacing_section-margin);  */
+   position: fixed;
+   bottom: 3rem;
+   width: calc(100vw - var(--spacing_l));  
+}
+
 
 .section {
     margin: var(--spacing_section-margin);
 }
 
 .garden {
-    width: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100vw - var(--spacing_l));
     height: 500px;
     display: flex;
     gap: var(--spacing_m);
@@ -174,27 +210,30 @@ body {
 }
 
 .marker-dot {
-  position: absolute;
-  bottom: 0;
-  width: 6px;
-  height: 6px;
-  transform: translateX(-50%);
-  background-color: var(--color_brown);
-  border-radius: 50%;
+    display: none;
+    position: absolute;
+    bottom: 0;
+    width: 6px;
+    height: 6px;
+    transform: translateX(-50%);
+    background-color: var(--color_brown);
+    border-radius: 50%;
 }
 
 .marker-label {
+    
   position: absolute;
   left: 50%;
   white-space: nowrap;
-  padding: 0  var(--spacing_inner-padding);
-  background-color: white;
-  font-size: 10px;
+  /* padding: 0  var(--spacing_inner-padding); */
+  /* background-color: white; */
+  font-size: var(--font-size_s);
   cursor: pointer;
   /* bottom is set dynamically */
 }
 
 .marker-line {
+    display: none;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

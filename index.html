@@ -10,7 +10,13 @@
 <body>
     <div class="site-container">
         <header class="header">
-            <a href="" class="site-title">Radio<br>Gardening<br>Summer School</a>
+            <div class="header__title">
+                <a href="" class="site-title">Radio<br>Gardening<br>Summer School</a>
+            </div>
+            <nav class="header__nav">
+                <a href="https://robidacollective.com/" class="header__nav__link" target="_blank">Go to main website</a>
+                <button onclick="toggleAside()" class="header__nav__link">Open chat</button>
+            </nav>
         </header>
         <main class="main">
             <section class="section">
@@ -41,18 +47,20 @@
                     </div>
                 </div>
             </section>
-            <section class="section">
-                <div class="timeline">
-                    <div class="timeline__inner">
-                        <div class="timeline-bar" id="timelineBar"></div>
-                        <div class="timeline-labels" id="dateLabels"></div>
-                        <div id="markersContainer"></div>
-                    </div>
-                </div>
-            </section>
         </main>
+        <aside id="aside" class="aside">
+            <div class="chat">
+             
+            </div>
+        </aside>
         <footer class="footer">
-            <a href="https://robidacollective.com/" target="_blank">Go to main website</a>
+            <div class="timeline">
+                <div class="timeline__inner">
+                    <div class="timeline-bar" id="timelineBar"></div>
+                    <div class="timeline-labels" id="dateLabels"></div>
+                    <div id="markersContainer"></div>
+                </div>
+            </div>
         </footer>
     </div>
     <div id="popup" class="popup hidden">
