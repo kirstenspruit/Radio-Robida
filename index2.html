@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Gardening Summer School</title>
+    <link rel="stylesheet" href="styles2.css">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&amp;display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="site-container">
+        <header class="header">
+            <div class="header__title">
+                <a href="" class="site-title">Radio<br>Gardening<br>Summer School</a>
+            </div>
+            <nav class="header__nav">
+                <button onclick="toggleAside()" class="button">Join the chat</button>
+                <button id="toggleScheduleBtn" class="button">Check the schedule</button>
+                <a href="https://robidacollective.com/projects/academy-of-margins/summer-school-of-the-academy-of-margins-2025" class="button" target="_blank">More info</a>
+            </nav>
+        </header>
+        <main class="main">
+            <section class="section">
+                <div class="stream">
+                    <div class="stream__channel">
+                        <div class="audio">
+                            <audio class="audio__source" src="https://radio.goodtimesbadtimes.club/radio/8060/radio.mp3"></audio>
+                            <div class="audio__ui">
+                                <button class="button audio__playBtn">Tune in</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream__channel">
+                        <div class="audio">
+                            <audio class="audio__source" src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3"></audio>
+                            <div class="audio__ui">
+                                <button class="button audio__playBtn">Tune in</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="stream__channel">
+                        <div class="audio">
+                            <audio class="audio__source" src="https://radio.goodtimesbadtimes.club/radio/8000/radio.mp3"></audio>
+                            <div class="audio__ui">
+                                <button class="button audio__playBtn">Tune in</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+                <div id="schedule" class="schedule hidden">
+                    <ul id="scheduleList" class="schedule__list"></ul>
+                </div>
+            </section>
+        </main>
+        <aside id="aside" class="aside">
+            <div class="chat">
+             
+            </div>
+        </aside>
+        <footer class="footer">
+            <div class="timeline-wrapper">
+                <button id="toggleViewBtn" class="button">+/-</button>
+                <div id="timeline" class="timeline timeline--week">
+                <div class="timeline__track"></div>
+                </div>
+            </div>
+            <div class="announcements">
+                <marquee scrollamount="3" class="announcements__marquee">
+                    <span>Announcements....</span>
+                </marquee>
+            </div>
+    
+        </footer>
+    </div>
+    
+
+
+
+</body>
+<script src="script2.js"></script>
+<script src="timeline.js"></script>
+</html>
